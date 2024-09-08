@@ -1,0 +1,9 @@
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/FalaMangole.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/install.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/FalaMangole_autogen_timestamp_deps.dir
+/home/leumim/Documents/FalaMangole/FalaMangole/build/Desktop-Debug/CMakeFiles/FalaMangole_autogen.dir
