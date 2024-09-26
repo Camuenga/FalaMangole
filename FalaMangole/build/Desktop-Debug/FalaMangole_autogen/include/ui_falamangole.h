@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -33,31 +32,39 @@ public:
     QLabel *label_3;
     QLabel *label_2;
     QLabel *label;
-    QMenuBar *menubar;
+    QLabel *label_4;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *falamangole)
     {
         if (falamangole->objectName().isEmpty())
             falamangole->setObjectName("falamangole");
-        falamangole->resize(300, 350);
-        falamangole->setMinimumSize(QSize(300, 350));
-        falamangole->setMaximumSize(QSize(300, 350));
+        falamangole->setWindowModality(Qt::WindowModality::NonModal);
+        falamangole->resize(300, 250);
+        falamangole->setMinimumSize(QSize(300, 250));
+        falamangole->setMaximumSize(QSize(300, 250));
+        falamangole->setStyleSheet(QString::fromUtf8("QMainWindow{background-color: rgba(10, 40, 114, 119);}"));
         centralwidget = new QWidget(falamangole);
         centralwidget->setObjectName("centralwidget");
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(20, 40, 251, 61));
+        horizontalLayoutWidget->setGeometry(QRect(20, 50, 251, 41));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         lineEdit = new QLineEdit(horizontalLayoutWidget);
         lineEdit->setObjectName("lineEdit");
+        lineEdit->setMinimumSize(QSize(0, 0));
+        lineEdit->setMaximumSize(QSize(16777215, 16777215));
+        lineEdit->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        lineEdit->setStyleSheet(QString::fromUtf8(""));
+        lineEdit->setMaxLength(16);
 
         horizontalLayout->addWidget(lineEdit);
 
         comboBox = new QComboBox(horizontalLayoutWidget);
-        comboBox->addItem(QString());
+        QIcon icon(QIcon::fromTheme(QString::fromUtf8("accessories-dictionary")));
+        comboBox->addItem(icon, QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
@@ -85,12 +92,13 @@ public:
         comboBox->addItem(QString());
         comboBox->setObjectName("comboBox");
         comboBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        comboBox->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(comboBox);
 
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(50, 160, 61, 41));
+        label_3->setGeometry(QRect(60, 130, 61, 41));
         QFont font;
         font.setPointSize(23);
         label_3->setFont(font);
@@ -98,7 +106,7 @@ public:
 ""));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(110, 160, 111, 41));
+        label_2->setGeometry(QRect(120, 130, 111, 41));
         QFont font1;
         font1.setPointSize(24);
         label_2->setFont(font1);
@@ -106,18 +114,19 @@ public:
         label_2->setStyleSheet(QString::fromUtf8("QLabel{color: rgb(246, 211, 45)}"));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(220, 160, 21, 41));
+        label->setGeometry(QRect(230, 130, 21, 41));
         QFont font2;
         font2.setPointSize(25);
         font2.setBold(true);
         label->setFont(font2);
         label->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         label->setStyleSheet(QString::fromUtf8("QLabel{color: rgb(246, 211, 45)}"));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(40, 120, 21, 16));
+        label_4->setStyleSheet(QString::fromUtf8("QLabel{background-color:rgb(192, 28, 40);\n"
+"border-radius:3%;}"));
         falamangole->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(falamangole);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 300, 20));
-        falamangole->setMenuBar(menubar);
         statusbar = new QStatusBar(falamangole);
         statusbar->setObjectName("statusbar");
         falamangole->setStatusBar(statusbar);
@@ -130,7 +139,7 @@ public:
     void retranslateUi(QMainWindow *falamangole)
     {
         falamangole->setWindowTitle(QCoreApplication::translate("falamangole", "falamangole", nullptr));
-        lineEdit->setPlaceholderText(QCoreApplication::translate("falamangole", "digite cal\303\243o", nullptr));
+        lineEdit->setPlaceholderText(QString());
         comboBox->setItemText(0, QString());
         comboBox->setItemText(1, QCoreApplication::translate("falamangole", "A", nullptr));
         comboBox->setItemText(2, QCoreApplication::translate("falamangole", "B", nullptr));
@@ -161,6 +170,7 @@ public:
         label_3->setText(QCoreApplication::translate("falamangole", "Fala", nullptr));
         label_2->setText(QCoreApplication::translate("falamangole", "Mangol", nullptr));
         label->setText(QCoreApplication::translate("falamangole", "\303\251", nullptr));
+        label_4->setText(QString());
     } // retranslateUi
 
 };

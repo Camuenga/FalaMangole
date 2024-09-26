@@ -12,3 +12,9 @@ falamangole::~falamangole()
 {
     delete ui;
 }
+
+void falamangole::on_lineEdit_textChanged(const QString &arg1)
+{
+
+}
+
