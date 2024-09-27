@@ -17,6 +17,14 @@ public:
     falamangole(QWidget *parent = nullptr);
     ~falamangole();
 
+public:
+   short arg1length, arg2length;
+
+private slots:
+    void on_lineEdit_textChanged(const QString &arg1);
+    void on_comboBox_currentTextChanged(const QString &arg1);
+    void validateArg1ndArg2();
+
 private:
     Ui::falamangole *ui;
 };
