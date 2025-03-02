@@ -1,0 +1,8 @@
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/FalaMangole.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/edit_cache.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/rebuild_cache.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/install.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/install/local.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/install/strip.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/FalaMangole_autogen_timestamp_deps.dir
+/home/spot/FalaMangole/build/Desktop/CMakeFiles/FalaMangole_autogen.dir

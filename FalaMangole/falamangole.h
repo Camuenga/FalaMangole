@@ -13,12 +13,12 @@ class falamangole : public QMainWindow
 {
     Q_OBJECT
 
+private:
+    const char *LineEditArg1length, *CombBoxArg2length;
+
 public:
     falamangole(QWidget *parent = nullptr);
     ~falamangole();
-
-public:
-   short arg1length, arg2length;
 
 private slots:
     void on_lineEdit_textChanged(const QString &arg1);
